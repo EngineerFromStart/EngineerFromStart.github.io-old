@@ -2,8 +2,8 @@ $(document)
   .ready(function() {
 
 
-    //load side bar
-    loadHtml($('body'), "/resources/html/header.html", function() {
+    //load header bar
+    loadHtml($('header'), "/resources/html/header.html", function() {
       Materialize.updateTextFields();
     }, {
       prepend: true
