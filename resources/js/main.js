@@ -11,10 +11,11 @@ $(document)
       var main = $('main');
       var tab_name = tab_id.substring(1, tab_id.length)
       if ($(tab_id).length == 0) {
-        loadHtml(main, "resources/html/tutorials/" + tab_name + ".html");
-        tabs_holder.tabs('select_tab', tab_name);
-        $(tab_id + " .collapsible").collapsible({
-          accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        loadHtml(main, "resources/html/tutorials/" + tab_name + ".html", function(){
+          tabs_holder.tabs('select_tab', tab_name);
+          $("#"+tab_name + " .collapsible").collapsible({
+            accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+          });
         });
       }
     }
@@ -22,9 +23,10 @@ $(document)
     tabs.on('click', loadAndSetTabs);
     dropdowns.on('click', loadAndSetTabs);
 
-    function loadHtml($target, path) {
+    function loadHtml($target, path, callback) {
       $.get(path, function(response) {
         $target.append(response);
+        callback.apply(this);
       });
       //target.append('<object type="text/html" data="'+path+'" ></object>')
     };
