@@ -24,9 +24,9 @@ $(document)
     tabs.on('click', loadAndSetTabs);
     dropdowns.on('click', loadAndSetTabs);
 
-    function loadHtml($target, path, callback, extras) {
+    function loadHtml($target, path, callback, options) {
       $.get(path, function(response) {
-        if (extras["prepend"]) {
+        if (options && options["prepend"]) {
 
         } else {
           $target.append(response);
