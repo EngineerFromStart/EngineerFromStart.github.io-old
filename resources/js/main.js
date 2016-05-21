@@ -28,7 +28,7 @@ $(document)
 
     function loadHtml($target, path, callback, extras) {
       $.get(path, function(response) {
-        if (prepend) {
+        if (extras["prepend"]) {
 
         } else {
           $target.append(response);
