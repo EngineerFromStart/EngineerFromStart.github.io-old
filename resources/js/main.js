@@ -1,6 +1,6 @@
 $(document)
   .ready(function() {
-    var dropdowns = $("#main_content_tabs li a");
+    var dropdowns = $("#main_content_dropdowns li a");
     var tabs = $("#main_content_tabs .tab a");
 
     function loadAndSetTabs() {
