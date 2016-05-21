@@ -10,7 +10,9 @@ $(document)
     });
 
     function loadHtml($target, path) {
-      $target.load(path);
+      $.get(path, function(response){
+        main.append(response);
+      });
       //target.append('<object type="text/html" data="'+path+'" ></object>')
     };
   });
