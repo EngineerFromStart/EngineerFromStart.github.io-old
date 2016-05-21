@@ -8,6 +8,14 @@ nav {
 }
 main {
   padding-left: 290px;
+  min-height: calc(100% - 144px);
+}
+footer{
+  clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
 }
 .tabs.dropdown-content {
   height: auto;
