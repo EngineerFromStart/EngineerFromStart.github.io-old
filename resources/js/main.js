@@ -1,14 +1,22 @@
 $(document)
   .ready(function() {
 
+
     //load side bar
-    loadHtml($('body'), "/resources/html/sidebar.html", function(){
-        $("#slide-nav .tabs").tabs();
+    loadHtml($('body'), "/resources/html/header.html", function() {
+      Materialize.updateTextFields();
+    }, {
+      prepend: true
+    });
 
-        Materialize.updateTextFields();
-    }, {prepend: true});
+    //load side bar
+    loadHtml($('body'), "/resources/html/sidebar.html", function() {
+      $("#slide-nav .tabs").tabs();
 
-
+      Materialize.updateTextFields();
+    }, {
+      prepend: true
+    });
     //load content tabs as needed
     var dropdowns = $("#main_content_dropdowns li a");
     var tabs_holder = $("#main_content_tabs");
@@ -39,7 +47,7 @@ $(document)
         } else {
           $target.append(response);
         }
-        if (callback){
+        if (callback) {
           callback.apply($target);
         }
       });
