@@ -8,7 +8,7 @@ $(document)
       var main = $('main');
       var tab_name = tab_id.substring(1, tab_id.length)
       if ($(tab_id).length == 0) {
-        loadHtml(main, "resources/html/tutorials/" + tab_name.substring(1, tab_name.length) + ".html");
+        loadHtml(main, "resources/html/tutorials/" + tab_name + ".html");
 
         $(this).tabs('select_tab', tab_name);
         $(this).collapsible({
