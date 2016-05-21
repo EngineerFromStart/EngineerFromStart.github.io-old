@@ -11,7 +11,7 @@ $(document)
 
     function loadHtml($target, path) {
       $.get(path, function(response){
-        target.append(response);
+        $target.append(response);
       });
       //target.append('<object type="text/html" data="'+path+'" ></object>')
     };
