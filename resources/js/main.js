@@ -1,7 +1,10 @@
 $(document)
   .ready(function() {
+
     var dropdowns = $("#main_content_dropdowns li a");
+    var tabs_holder = $("main_content_tabs");
     var tabs = $("#main_content_tabs .tab a");
+    var tabs_holder = $("main_content_tabs");
 
     function loadAndSetTabs() {
       var tab_id = $(this).attr("href");
@@ -9,9 +12,8 @@ $(document)
       var tab_name = tab_id.substring(1, tab_id.length)
       if ($(tab_id).length == 0) {
         loadHtml(main, "resources/html/tutorials/" + tab_name + ".html");
-
-        $(this).tabs('select_tab', tab_name);
-        $(this).collapsible({
+        tabs_holder.tabs('select_tab', tab_name);
+        $(tab_id + " .collapsible").collapsible({
           accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
         });
       }
