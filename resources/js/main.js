@@ -1,9 +1,7 @@
 $(document)
   .ready(function() {
 
-    loadHtml($('body'), "/resources/sidebar.html", false, {
-      prepend: true
-    })
+    loadHtml($('body'), "/resources/html/sidebar.html", false, {prepend: true});
 
     var dropdowns = $("#main_content_dropdowns li a");
     var tabs_holder = $("#main_content_tabs");
