@@ -1,8 +1,13 @@
 $(document)
   .ready(function() {
 
-    loadHtml($('body'), "/resources/html/sidebar.html", false, {prepend: true});
+    //load side bar
+    loadHtml($('body'), "/resources/html/sidebar.html", function(){
+        $("#slide-nav .tabs").tabs();
+    }, {prepend: true});
 
+
+    //load content tabs as needed
     var dropdowns = $("#main_content_dropdowns li a");
     var tabs_holder = $("#main_content_tabs");
     var tabs = $("#main_content_tabs .tab a");
@@ -20,6 +25,7 @@ $(document)
         });
       }
     }
+
 
     tabs.on('click', loadAndSetTabs);
     dropdowns.on('click', loadAndSetTabs);
