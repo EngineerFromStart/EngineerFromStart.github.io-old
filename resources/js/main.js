@@ -2,9 +2,8 @@ $(document)
   .ready(function() {
 
     var dropdowns = $("#main_content_dropdowns li a");
-    var tabs_holder = $("main_content_tabs");
+    var tabs_holder = $("#main_content_tabs");
     var tabs = $("#main_content_tabs .tab a");
-    var tabs_holder = $("main_content_tabs");
 
     function loadAndSetTabs() {
       var tab_id = $(this).attr("href");
