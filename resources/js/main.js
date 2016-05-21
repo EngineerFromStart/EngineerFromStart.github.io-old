@@ -3,7 +3,7 @@ $(document)
     var dropdowns = $("#main_content_tabs li a");
     var tabs = $("#main_content_tabs .tab a");
 
-    function loadTabs() {
+    function loadAndSetTabs() {
       var tab_id = $(this).attr("href");
       var main = $('main');
       var tab_name = tab_id.substring(1, tab_id.length)
