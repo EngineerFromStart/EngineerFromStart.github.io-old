@@ -4,6 +4,8 @@ $(document)
     //load side bar
     loadHtml($('body'), "/resources/html/sidebar.html", function(){
         $("#slide-nav .tabs").tabs();
+
+        Materialize.updateTextFields();
     }, {prepend: true});
 
 
